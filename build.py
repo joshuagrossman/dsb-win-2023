@@ -15,8 +15,8 @@ def censor_nb(nb):
       censors python object nb in-place
     """
     for cell in nb["cells"]:
-      if cell["cell_type"] != "code":
-        continue
+      # if cell["cell_type"] != "code":
+      #   continue
       cell["execution_count"] = 0
       cell["outputs"] = []
       censored_source = []
